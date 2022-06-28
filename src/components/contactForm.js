@@ -18,10 +18,12 @@ const ContactForm = () => {
         <div>
             <div>Alguna consulta? Escribinos a nuestro mail: </div>
             <form ref={form} onSubmit={sendEmail}>
-                <input placeholder="Nombre" type="text" name="Name" />
-                <input placeholder="Email" type="email" name="user_email" />
-                <textarea placeholder="Mensaje" name="message"></textarea>
-                <input type="submit" value='send' />
+                <div>
+                    <input placeholder="Nombre" type="text" name="Name" />
+                    <input placeholder="Email" type="email" name="user_email" />
+                    <textarea placeholder="Mensaje" name="message"></textarea>
+                </div>
+                <input className='h-[10vh] text-[#0A192F] p-1' type="submit" value='send' />
             </form>
             <div>tambien podes comunicarte a nuestro whatsapp: </div>
             <div>icono de wsp +540000000001</div>

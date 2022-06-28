@@ -13,7 +13,7 @@ const App = () => {
 
     return (
         <BrowserRouter>
-            <div className='bg-blue'>
+            <div className='bg-slate-700'>
                 <Navbar />
                 <Routes>
                     <Route path="/" element={
