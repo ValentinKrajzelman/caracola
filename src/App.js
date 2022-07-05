@@ -27,7 +27,6 @@ const App = () => {
                     <Route path="/talleres" element={
                         <div>
                             <Talleres />
-                            <ContactForm />
                         </div>}></Route>
                 </Routes>
                 <Footer />
