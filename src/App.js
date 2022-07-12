@@ -9,6 +9,8 @@ import Navbar from "./components/navbar";
 import QuienesSomos from "./components/quienesSomos";
 import Talleres from "./components/talleres";
 
+//cosas
+
 const App = () => {
 
     return (
