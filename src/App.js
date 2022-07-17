@@ -15,23 +15,25 @@ const App = () => {
 
     return (
         <BrowserRouter>
-            <div className='bg-slate-700 px-60'>
-                <Navbar />
-                <Routes>
-                    <Route path="/" element={
-                        <div>
-                            <Hero />
-                            <QuienesSomos />
-                            <ComoProducimos />
-                            <FAQ />
-                            <ContactForm />
-                        </div>}></Route>
-                    <Route path="/talleres" element={
-                        <div>
-                            <Talleres />
-                        </div>}></Route>
-                </Routes>
-                <Footer />
+            <div className='bg-slate-700 flex place-content-center'>
+                <div className='max-w-[89rem]'>
+                    <Navbar />
+                    <Routes>
+                        <Route path="/" element={
+                            <div>
+                                <Talleres />
+                                <QuienesSomos />
+                                <Hero />
+                                <FAQ />
+                                <ContactForm />
+                            </div>}></Route>
+                        {/* <Route path="/talleres" element={
+                            <div>
+                                <Talleres />
+                            </div>}></Route> */}
+                    </Routes>
+                    <Footer />
+                </div>
             </div>
         </BrowserRouter>
     );

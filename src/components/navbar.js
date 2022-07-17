@@ -14,13 +14,12 @@ const Navbar = () => {
                     <a href="https://www.instagram.com/tienda.caracolameg/?hl=en" target='blank' rel='noreferrer'><AiFillInstagram className='mr-2' /></a>
                     <a href="https://www.facebook.com/caracolapiesasunicas/posts/" target='blank' rel='noreferrer'><AiFillFacebook className='mr-2' /></a>
                 </div>
-                <div className='grid grid-cols-5 py-8 '>
-                    <Link to="/" className='text-4xl col-start-1'>Caracola</Link>
-                    <div className='text-base col-start-2 col-end-6 flex place-content-evenly pt-5'>
+                <div className='grid grid-cols-5 py-8 mb-16'>
+                    <Link to="/" className='text-4xl col-start-1 pl-10'>Caracola</Link>
+                    <div className='text-base col-start-2 col-end-6 flex place-content-evenly pt-2'>
 
-                        <a href="https://valentinkrajzelman.mercadoshops.com.ar/?mshops-cookie-isguest=false&mshops-redirection-timestamp=1656157875972&mshops-cookie-cp=1031" target='blank' rel='noreferrer'>Piezas</a>
+                        <a href="https://valentinkrajzelman.mercadoshops.com.ar/?mshops-cookie-isguest=false&mshops-redirection-timestamp=1656157875972&mshops-cookie-cp=1031" target='blank' rel='noreferrer'>Tienda</a>
                         <Link to="/talleres">Talleres</Link>
-                        <HashLink smooth to={"#comoProducimos"}>Como Producimos</HashLink>
                         <HashLink smooth to={'#quienesSomos'}>Quienes somos</HashLink>
                         <HashLink smooth to={'#contacto'}>Contacto</HashLink>
                         <HashLink smooth to={'#preguntasFrecuentes'}>Preguntas frecuentes</HashLink>
