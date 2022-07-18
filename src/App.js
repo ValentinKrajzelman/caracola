@@ -7,7 +7,7 @@ import Footer from "./components/footer";
 import Hero from "./components/hero";
 import Navbar from "./components/navbar";
 import QuienesSomos from "./components/quienesSomos";
-import Talleres from "./components/talleres";
+import Talleres2 from "./components/talleres2";
 
 //cosas
 
@@ -21,9 +21,9 @@ const App = () => {
                     <Routes>
                         <Route path="/" element={
                             <div>
-                                <Talleres />
-                                <QuienesSomos />
+                                <Talleres2 />
                                 <Hero />
+                                <QuienesSomos />
                                 <FAQ />
                                 <ContactForm />
                             </div>}></Route>
