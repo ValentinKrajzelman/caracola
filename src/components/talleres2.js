@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-icons/bs';
 
 import imagen from '../fotos/imagen taller.jpg';
 
 const taller1 = {
     imagen: imagen,
     nombre: 'taller1',
-    descripcion: "khdfkdfkhdfkldfndifdhfldkjfkdjnbfoidyfndfkhdkuhfkdnfoihdkfbndkifdkjnfldifdnfldufjodmfldhfdlfudhpfndloihfdnfldhifodnfon",
+    descripcion: "kkhdfkdfkhdfkldfndifdhfldkjfkdjnbfoidyfndfkhdkuhfkdnfoihdkfbndkifdkjnfldifdnfldufjodmfldhfdlfudhpfndloihfdnfldhifodnfon khdfkdfkhdfkldfndifdhfldkjfkdjnbfoidyfndfkhdkuhfkdnfoihdkfbndkifdkjnfldifdnfldufjodmfldhfdlfudhpfndloihfdnfldhifodnfon khdfkdfkhdfkldfndifdhfldkjfkdjnbfoidyfndfkhdkuhfkdnfoihdkfbndkifdkjnfldifdnfldufjodmfldhfdlfudhpfndloihfdnfldhifodnfond",
     sede: '123 paso xddd la plata',
     email: 'cosas@hotmai.com',
     tel: '123445765768',
@@ -13,7 +14,7 @@ const taller1 = {
 const taller2 = {
     imagen: imagen,
     nombre: 'taller2',
-    descripcion: "khdfkdfkhdfkldfndifdhfldkjfkdjnbfoidyfndfkhdkuhfkdnfoihdkfbndkifdkjnfldifdnfldufjodmfldhfdlfudhpfndloihfdnfldhifodnfon",
+    descripcion: "khdfkdfkhdfkldfndifdhfldkjfkdjnbfoidyfndfkhdkuhfkdnfoihdkfbndkifdkjnfldifdnfldufjodmfldhfdlfudhpfndloihfdnfldhifodnfon ",
     sede: '123 paso xddd la plata',
     email: 'cosas@hotmai.com',
     tel: '123445765768',
@@ -32,16 +33,16 @@ let talleresElementos = [];
 
 for (let x = 0; x < talleres.length; x++) {
     talleresElementos[x] =
-        <div className='flex flex-row relative h-[41rem] w-[89rem]'>
+        <div className='relative flex flex-row min-h-[41rem] min-w-[89rem]'>
             <div className='absolute h-full w-full'>
                 <img src={talleres[x].imagen} className='h-full w-full'></img>
             </div>
             <div className='flex flex-col place-content-between z-10 w-full'>
-                <div className='flex flex-row place-content-between px-36 bg-slate-700 bg-opacity-50'>
-                    <div className='pl-24 py-7  text-5xl'>
+                <div className='flex flex-row place-content-between px-10 bg-slate-700 bg-opacity-50'>
+                    <div className='pl-24 py-2  text-5xl'>
                         {talleres[x].nombre}
                     </div>
-                    <div className='flex flex-col pr-5 py-7'>
+                    <div className='flex flex-col pr-5 py-2'>
                         <div>
                             {talleres[x].sede}
                         </div>
@@ -53,7 +54,7 @@ for (let x = 0; x < talleres.length; x++) {
                         </div>
                     </div>
                 </div>
-                <div className='bg-slate-700 bg-opacity-50 px-36 py-7'>
+                <div className='bg-slate-700 bg-opacity-50 px-10 py-7'>
                     {talleres[x].descripcion}
                 </div>
             </div>
@@ -62,18 +63,48 @@ for (let x = 0; x < talleres.length; x++) {
 
 
 const Talleres2 = () => {
-    const [inset, setInset] = useState('');
+
+    const [inset, setInset] = useState(0);
 
     const slider = (direccion) => {
 
+        if (inset == talleres.length - 1 && direccion == 1) {
+            return 0
+        }
 
-    };
+        else if (inset == 0 && direccion == -1) {
+            return talleres.length - 1
+        }
+
+        else return inset + direccion
+
+    }
+
+    // const slider = (direccion) => {
+
+    //     console.log(talleresElementos);
+    //     if (inset == 89 * (talleres.length - 1) && direccion == 1) {
+    //         // setInset(0)
+    //         return 0
+    //     }
+    //     else if (inset == 0 && direccion == -1) {
+    //         // setInset(89 * talleres.length)
+    //         return (89 * (talleres.length - 1))
+    //     }
+    //     else {
+    //         // setInset(inset + (89 * direccion))
+    //         return inset + (89 * direccion)
+    //     }
+
+    // };
 
     return (
-        <div className="relative h-[41rem] w-[89rem] overflow-hidden">
-            <div className={'absolute flex ' + inset} >
-                {talleresElementos}
+        <div className="relative flex flex-row place-content-between overflow-hidden h-[41rem] w-[89rem] mb-24  text-white ">
+            <button onClick={() => setInset(slider(-1))} className='z-50'><BsFillArrowLeftCircleFill className='ml-5 text-3xl z-50' /></button>
+            <div className={'absolute'} >
+                {talleresElementos[inset]}
             </div>
+            <button onClick={() => setInset(slider(1))} className='z-50'><BsFillArrowRightCircleFill className='mr-5 text-3xl z-50' /></button>
         </div>
     );
 }
