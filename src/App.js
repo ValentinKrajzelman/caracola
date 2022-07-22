@@ -15,7 +15,7 @@ const App = () => {
 
     return (
         <BrowserRouter>
-            <div className='bg-slate-700 flex place-content-center'>
+            <div className='bg-slate-700 flex place-content-center text-white'>
                 <div className='max-w-[89rem]'>
                     <Navbar />
                     <Routes>
@@ -24,8 +24,8 @@ const App = () => {
                                 <Talleres2 />
                                 <Hero />
                                 <QuienesSomos />
-                                <FAQ />
-                                <ContactForm />
+                                {/* <FAQ /> */}
+                                {/* <ContactForm /> */}
                             </div>}></Route>
                         {/* <Route path="/talleres" element={
                             <div>
