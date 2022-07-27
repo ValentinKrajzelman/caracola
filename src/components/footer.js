@@ -23,7 +23,7 @@ const Footer = () => {
                 <div className='flex flex-col'>
                     <div>Contacto</div>
                     <div>wsp: +54541687431</div>
-                    <div>email: eugenia@hotmail.com</div>
+                    <div>email: </div>
                 </div>
 
                 <ContactForm />
