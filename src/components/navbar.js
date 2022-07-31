@@ -4,8 +4,6 @@ import gatocono from "../fotos/gatocono.png";
 import { AiFillInstagram, AiFillFacebook } from 'react-icons/ai';
 
 
-//pone el link a shops en .env por que tiene el codigo postal y otros datos personales
-
 const Navbar = () => {
 
     return (
